@@ -1,0 +1,45 @@
+.btn {
+  display: inline-flex;
+  padding: 12px 40px;
+
+  color: $color-default-white;
+
+  background-color: $color-blue;
+  cursor: pointer;
+  border-radius: 53px;
+  transition: opacity $trans-default;
+  border: 2px solid transparent;
+
+  &--outline {
+    border: 2px solid $color-blue;
+    color: $color-blue;
+    background: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+  &--connection{
+    font-size: 24px;
+    padding: 20px 130px;
+    @include vp-1023{
+      padding: 12px 95px;
+    }
+
+  }
+  &--transparent{
+     background-color: transparent;
+    color:black;
+
+   }
+  &--transparent.is-active{
+    background-color: white;
+  }
+
+}

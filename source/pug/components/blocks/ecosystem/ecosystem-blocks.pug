@@ -1,0 +1,16 @@
+mixin ecosystem-block(title, description, effortsList, pictureData, blockClass)
+    section(class=blockClass)
+        h2= title
+        p= description
+        if effortsList && effortsList.length
+            .ecosystem-efforts
+                +list(effortsList, blockClass + "__item")
+        .ecosystem-content
+            +picture(
+                pictureData.path,
+                pictureData.image,
+                pictureData.format,
+                pictureData.width,
+                pictureData.height,
+                pictureData.alt
+            )

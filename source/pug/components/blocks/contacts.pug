@@ -1,0 +1,151 @@
+mixin contacts()
+    -
+        const dataContacts = [
+            {
+                image: {path: "content/contacts", image: "contact-1", format: "avif", width: 48, height: 48, altText: "Фото"},
+                name: "Анастасія",
+                phone: "063 014 28 59",
+
+                telegram: {
+                    telegramIcon: "icon-telegram",
+                    href: "https://t.me/username",
+                    telegramText: "Telegram",
+                },
+
+                mail: {
+                    mailIcon: "icon-mail",
+                    mailAdress: "email@gmail.com",
+                    mailText: "email",
+                },
+            },
+            {
+                image: {
+                    path: "content/contacts",
+                    image: "contact-2",
+                    format: "avif",
+                    width: 48,
+                    height: 48,
+                    altText: "Фото"
+                },
+                name: "Станіслав",
+                phone: "063 014 28 59",
+
+                telegram: {
+                    telegramIcon: "icon-telegram",
+                    href: "https://t.me/username",
+                    telegramText: "Telegram",
+                },
+
+                mail: {
+                    mailIcon: "icon-mail",
+                    mailAdress: "email@gmail.com",
+                    mailText: "email",
+                },
+            },
+            {
+                image: {
+                    path: "content/contacts",
+                    image: "contact-3",
+                    format: "avif",
+                    width: 48,
+                    height: 48,
+                    altText: "Фото"
+                },
+                name: "Марина",
+                phone: "063 014 28 59",
+
+                telegram: {
+                    telegramIcon: "icon-telegram",
+                    href: "https://t.me/username",
+                    telegramText: "Telegram",
+                },
+
+                mail: {
+                    mailIcon: "icon-mail",
+                    mailAdress: "email@gmail.com",
+                    mailText: "email",
+                },
+            },
+            {
+                image: {
+                    path: "content/contacts",
+                    image: "contact-4",
+                    format: "avif",
+                    width: 48,
+                    height: 48,
+                    altText: "Фото"
+                },
+                name: "Олена",
+                phone: "063 014 28 59",
+
+                telegram: {
+                    telegramIcon: "icon-telegram",
+                    href: "https://t.me/username",
+                    telegramText: "Telegram",
+                },
+
+                mail: {
+                    mailIcon: "icon-mail",
+                    mailAdress: "email@gmail.com",
+                    mailText: "email",
+                },
+            },
+            {
+                image: {
+                    path: "content/contacts",
+                    image: "contact-5",
+                    format: "avif",
+                    width: 48,
+                    height: 48,
+                    altText: "Фото"
+                },
+                name: "Павло",
+                phone: "063 014 28 59",
+
+                telegram: {
+                    telegramIcon: "icon-telegram",
+                    href: "https://t.me/username",
+                    telegramText: "Telegram",
+                },
+
+                mail: {
+                    mailIcon: "icon-mail",
+                    mailAdress: "email@gmail.com",
+                    mailText: "email",
+                },
+            }
+        ]
+
+    section.contacts
+        .container
+            h2.title Звʼяжіться з нами
+            p для отримання більш детальної інформації
+
+        ul.contacts-list
+            each item in dataContacts
+                li.contacts-item
+                    .contacts-img
+                        +img(
+                            item.image.path,
+                            item.image.image,
+                            item.image.format,
+                            item.image.width,
+                            item.image.height,
+                            item.image.altText
+                        )
+
+                    p=item.name
+
+                    +btn({text: item.phone, href: `tel:${item.phone}`}).btn--transparent
+
+                    .contacts-item-social.item-social
+                        .item-social-telegram
+                            a(href=item.telegram.href, target="_blank")
+                                +icon(item.telegram.telegramIcon, 48, 48)
+                                span=item.telegram.telegramText
+
+                        .item-social-mail
+                            a(href=`mailto:${item.mail.mailAdress}`)
+                                +icon(item.mail.mailIcon, 48, 48)
+                                span=item.mail.mailText
+        +btn({text: "Реєстрація", href: "#"})

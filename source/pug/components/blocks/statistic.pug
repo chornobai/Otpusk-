@@ -1,0 +1,34 @@
+mixin statistic()
+  -
+    const statisticList = [
+        {
+          value:"10",
+          text: "років співпраці"
+        },
+        {
+            value: "1500+",
+            text: "агенцій бронюють з нами"
+        },
+        {
+            value: "70+",
+            text: "туристичних операторів"
+        },
+        {
+            value: "10+",
+            text: "країн вильотів"
+        },
+
+
+    ]
+
+  section.statistic
+    .container
+        h2.title Нам довіряють
+        ul.statistic-list
+          each item in statisticList
+            li.statistic-item
+                span=item.value
+                p.statistic-item-text=item.text
+        .statistics-action
+            h3.title Приєднуйтесь до франшизи
+            +btn({text: "Доєднатись", href: "#", target: "#", isExternal: true}).btn_main

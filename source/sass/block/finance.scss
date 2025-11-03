@@ -1,0 +1,48 @@
+.finance{
+  padding:calc(48px + (96 - 48) * ((100vw - 320px) / (1512 - 320))) 0 calc(64px + (112 - 64) * ((100vw - 320px) / (1512 - 320))) 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: calc(32px + (80 - 32) * ((100vw - 320px) / (1512 - 320)))
+  }
+}
+.finance-list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  flex-wrap:wrap;
+  padding: 0;
+  row-gap: 48px;
+  column-gap: 15px;
+  justify-content: space-between;
+  .finance-item{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family:"ProximaNova-Bold" ;
+    row-gap: 24px;
+
+  }
+  .finance-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  nowrap;
+    gap:10px;
+    white-space: nowrap;
+  }
+  .finance-value{
+    font-size:calc(48px + (64 - 48) * ((100vw - 320px) / (1512 - 320)));
+  }
+  .finance-currency{
+    font-size:calc(24px + (28 - 24) * ((100vw - 320px) / (1512 - 320)));
+
+  }
+  .finance-text{
+    font-weight:500;
+    line-height: 135%;
+    font-family: "ProximaNova-Medium";
+  }
+}

@@ -1,0 +1,6 @@
+mixin list(items, blockClass, itemClass)
+    ul(class=blockClass)
+        each item in items
+            li(class=itemClass)
+                p= item.text
+

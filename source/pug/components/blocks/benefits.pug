@@ -1,0 +1,128 @@
+mixin benefits()
+    -
+        const benefitsList = [
+            {
+                path: "content/logo-partners-ua",
+                image: "logo-travelin",
+                format: "svg",
+                width: 130,
+                height: 30,
+                altText: "Logo Travelin"
+            },
+            {
+                path: "content/logo-partners-ua",
+                image: "logo-coral",
+                format: "svg",
+                width: 212,
+                height: 90,
+                altText: "Logo Coral"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-anex",
+                format: "svg",
+                width: 212,
+                height: 90,
+                altText: "Logo Anex"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-joinup",
+                format: "svg",
+                width: 212,
+                height: 90,
+                altText: "Logo Joinup"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-tpg",
+                format: "svg",
+                width: 106,
+                height: 53,
+                altText: "Logo TPG"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-alliance",
+                format: "svg",
+                width: 151,
+                height: 30,
+                altText: "Logo Alliance"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-al",
+                format: "svg",
+                width: 120,
+                height: 70,
+                altText: "Logo El"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-center",
+                format: "svg",
+                width: 146,
+                height: 36,
+                altText: "Logo Center"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-adriatic",
+                format: "svg",
+                width: 101,
+                height: 72,
+                altText: "Logo Adriatic"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-tg",
+                format: "svg",
+                width: 69,
+                height: 60,
+                altText: "Logo Tg"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-kompas",
+                format: "svg",
+                width: 191,
+                height: 34,
+                altText: "Logo Kompas"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-eurotrips",
+                format: "svg",
+                width: 128,
+                height: 72,
+                altText: "Logo Eurotrips"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-unitTravel",
+                format: "svg",
+                width: 212,
+                height: 72,
+                altText: "Logo unitTravel"
+            }, {
+                path: "content/logo-partners-ua",
+                image: "logo-trend",
+                format: "svg",
+                width: 173,
+                height: 53,
+                altText: "Logo Trend"
+            },{
+                path: "content/logo-partners-ua",
+                image: "logo-alf",
+                format: "svg",
+                width: 126,
+                height: 68,
+                altText: "Logo alf"
+            },  {
+                path: "content/logo-partners-ua",
+                image: "logo-travel",
+                format: "svg",
+                width: 127,
+                height: 53,
+                altText: "Logo Travel"
+            },
+
+
+        ]
+
+    section.benefits
+        .container
+            h2.title Вигідні умови співпраці по бронюванню українських туроператорів
+            ul.benefits-list
+                each item in benefitsList
+                    li.benefits-item
+                        +img-svg(item.path, item.image, item.format, item.width, item.height, item.altText)

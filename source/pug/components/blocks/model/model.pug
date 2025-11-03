@@ -1,0 +1,11 @@
+mixin model()
+    section.model
+        .container
+            h2.title Моделі співпраці в мережі
+            .model-wrapper
+                +model-sidebar()
+                +model-cards()
+            .model-notes *при утриманні плану Преміум продовж року (120+ заявок за рік)
+            .model-action
+                p Ми допоможемо обрати найвигідніший варіант співпраці для вас!
+                +btn({text: "Реєстрація", href: "#", target: "#", isExternal: true}).btn_main

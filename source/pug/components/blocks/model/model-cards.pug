@@ -1,0 +1,166 @@
+mixin model-cards()
+
+    .card.tabs.tabs--cards(data-tabs= "parent", data-delay ="200")
+        .cards-tabs.tabs__controls(data-tabs="controls")
+            +btn({type: "button", text: "Партнери"}).tab__control.btn--transparent(data-tabs="control", data-index="0")
+            +btn({type: "button", text: "Друзi"}).tab__control.btn--transparent(data-tabs="control", data-index="1")
+            +btn({type: "button", text: "Сiм'я"}).tab__control.btn--transparent(data-tabs="control", data-index="2")
+        div.tabs__content.model-cards-wrapper(data-tabs="content")
+            ul.card-partner.card-element(data-tabs="element")
+                li.card-header
+                    .card-header-title Партнери
+                    h3.title--middle Свій Бренд
+                li.card-entry
+                    +icon("icon-close", 17, 17)
+                li.card-branding-offline
+                    p Не вимагається
+                li.card-branding-online
+                    p Не вимагається
+                li.card-office-require
+                    +icon("icon-close", 17, 17)
+                li.card-territory
+                    +icon("icon-close", 17, 17)
+                li.card-connection-tour
+                    p Можливі виключення для франчайзингових офісів туроператорів
+                li.card-trading
+                    +icon("icon-tik", 17,17)
+                li.card-bonus
+                    span 2000 грн
+                li.card-lids
+                    p В розробці
+                li.card-landing
+                    +icon("icon-tik", 17,17)
+                li.card-trading-bonus
+                    p 2000 грн
+                li.card-market
+                    +icon("icon-tik", 17,17)
+                li.card-targeting
+                    p Безкоштовна консультація на початку співпраці
+                li.card-study
+                    p!=" Базовий курс з туризму –безкоштовно навчаємо вас і вашихменеджерів! <br> + <br> курси по таргетингу,бухгалтерії, юр. питанням, тощо"
+                li.card-content
+                    p Доступ до каналу «ТАТ Контент Преміум» 3-5 якісних постів на день з похідними матеріалами
+                li.card-ad
+                    +icon("icon-close", 17, 17)
+                li.card-priority
+                    +icon("icon-close", 17, 17)
+                li.card-trading-plan
+                    .trading-plan
+                            .trading-plan-minor
+                                p 1 заявка
+                            .trading-plan-major
+                                p 10 заявок
+
+                    .comission
+                            p Стандарт
+
+                             p Премiум
+                    .card-ads
+                        p Доступ до турів мережі
+            ul.card-friend.card-element(data-tabs="element")
+                li.card-header
+                    .card-header-title Друзі
+                    h3.title--middle Ко-Бренд
+                li.card-entry
+                    +icon("icon-close", 17, 17)
+                li.card-branding-offline
+                    p Безкоштовне брендування
+                li.card-branding-online
+                    p Соціальні мережі та сайт
+                li.card-office-require
+                    p Окреме приміщення
+                li.card-territory
+                    +icon("icon-close", 17, 17)
+                li.card-connection-tour
+
+                    p Можливі виключення для франчайзингових офісів туроператорів
+                li.card-trading
+                    +icon("icon-tik", 17,17)
+                li.card-bonus
+                    span 3000 грн
+                li.card-lids
+                    p В розробці
+                li.card-landing
+                    +icon("icon-tik", 17,17)
+                li.card-trading-bonus
+                    p 3000 грн
+                li.card-market
+                    +icon("icon-tik", 17,17)
+                    p Приоритетне (після Бренд ТАТ)
+                li.card-targeting
+                    p Безкоштовна консультація на початку співпраці
+                li.card-study
+                    p!="Базовий курс з туризму – безкоштовно навчаємо вас і ваших менеджерів!<br> + <br> курси по таргетингу, бухгалтерії, юр. питанням, тощо"
+                li.card-content
+                    p Доступ до каналу «ТАТ Контент Преміум» 3-5 якісних постів на день з похідними матеріалами
+                li.card-ad
+                    +icon("icon-close", 17, 17)
+                li.card-priority
+                    +icon("icon-close", 17, 17)
+                li.card-trading-plan
+                    .trading-plan
+                        .trading-plan-minor
+                            p 1 заявка
+                        .trading-plan-major
+                            p 10 заявок
+
+                    .comission
+                                p Стандарт
+                                p Премiум
+
+                    .ads-list
+                                p Доступ до турів мережі
+                                p Зі знижкою 50% 1 на рік*
+            ul.card-family.card-element(data-tabs="element")
+                li.card-header
+                    .card-header-title Сімʼя
+                    h3.title--middle Бренд - ТАТ
+                li.card-entry
+                    +icon("icon-close", 17, 17)
+                li.card-branding-offline
+                    p Розширине безкоштовне брендування
+                li.card-branding-online
+                    p Соціальні мережі та сайт
+                li.card-office-require
+                    p Окреме приміщення
+                li.card-territory
+                    p 500м
+                li.card-connection-tour
+
+                    p Можливі виключення для франчайзингових офісів туроператорів
+                li.card-trading
+                    +icon("icon-tik", 17,17)
+                li.card-bonus
+                    span 5000 грн
+                li.card-lids
+                    p В розробці
+                li.card-landing
+                    +icon("icon-tik", 17,17)
+                    p + 20% до поповнення
+                li.card-trading-bonus
+                    p 5000 грн
+                li.card-market
+                    +icon("icon-tik", 17,17)
+                    p Приоритетне (вгорі списку)
+                li.card-targeting
+                    p Безкоштовна консультація щоквартально
+                li.card-study
+                    p!= "Базовий курс з туризму – безкоштовно навчаємо вас і ваших менеджерів! <br> + курси по таргетингу, бухгалтерії, юр. питанням, тощо + індивідуальні коуч-сессії"
+                li.card-content
+                    p Доступ до каналу «ТАТ Контент Преміум» 3-5 якісних постів на день з похідними матеріалами
+                li.card-ad
+                    p Компенсація 50% витрат за узгодженням,в рекламі бренд ТАТ
+                li.card-priority
+                    +icon("icon-tik", 17,17)
+                li.card-trading-plan
+                    .trading-plan
+                        .trading-plan-minor
+                            p 1 заявка
+                        .trading-plan-major
+                            p 10 заявок
+                    .comission
+                                    p Стандарт
+                                    p Премiум
+                    .ads-list
+                                    p Доступ до турів мережі
+                                    p Безкоштовно 1 на рік*

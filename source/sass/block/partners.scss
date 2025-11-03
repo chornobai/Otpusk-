@@ -1,0 +1,134 @@
+.partners {
+  position: relative;
+  background-color: $color-gray;
+  padding: 96px 0 112px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 64%;
+    transform: translateY(-60%);
+    right: calc(100px + (-24 - 100) * ((100vw - 320px) / (1512 - 320)));
+    width: 763px;
+    height: 604px;
+    background: url("../../img/bg/map-bg.png") left/contain no-repeat;
+    z-index: 0;
+    border-radius: 100px;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 56px;
+  }
+
+  .partners-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 100px;
+    @include vp-1023 {
+      flex-direction: column;
+
+    }
+
+  }
+
+  .partners-logo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 1;
+    max-width: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    row-gap: 48px;
+    position: relative;
+
+    @include vp-1023 {
+    flex-direction: row;
+      flex-wrap: wrap;
+      gap:24px;
+      max-width: 100%;
+
+    }
+
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 420px;
+      width: 81px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: calc(0px + (-150 - 0) * ((100vw - 320px) / (1512 - 320)));
+      background: url("../../img/svg/decore /brace.svg");
+      @include vp-1023 {
+        transform: rotate(90deg);
+right:50%;
+      }
+    }
+  }
+
+  .partner-logo-link {
+    display: flex;
+    width: 148px;
+    height: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .partners-country-list {
+    margin: 0;
+    padding: 54px 8px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:calc(16px + (24 - 16) * ((100vw - 375px) / (1512 - 375)));
+    width: 100%;
+    max-width: 696px;
+    position: relative;
+    @include vp-1023 {
+
+      padding: 54px 0;
+      &:nth-child(3){
+        order: 1;
+      }
+    }
+
+    .partners-country-item {
+      letter-spacing: 0.2px;
+      font-family: "ProximaNova-Semibold", Arial, sans-serif;;
+      font-weight: 600;
+      font-size: calc(19px + (24 - 19) * ((100vw - 375px) / (1512 - 375)));
+      line-height: 100%;
+      padding: calc(16px + (24 - 16) * ((100vw - 375px) / (1512 - 375))) calc(19px + (32 - 19) * ((100vw - 375px) / (1512 - 375)));
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      border-radius: 106px;
+      background: $color-yellow;
+      column-gap: calc(10px + (16 - 10) * ((100vw - 375px) / (1512 - 375)));
+      //@include vp-1023 {
+      //  &:nth-child(3){
+      //    order: 2;
+      //  }
+      //  &:nth-child(2){
+      //    order: 3;
+      //  }
+      //  &:nth-child(3){
+      //    order: 2;
+      //  }
+      //}
+    }
+  }
+}

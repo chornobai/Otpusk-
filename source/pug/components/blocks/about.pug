@@ -1,0 +1,73 @@
+mixin about()
+  -
+    const aboutList = [
+        {
+            nameIcon: "icon-noTax",
+            width: 46,
+            height: 37,
+            boldtext: "Жодних вступних внесків",
+            text:"і роялті"
+        },
+        {
+            nameIcon: "icon-giveHeart",
+            width: 46,
+            height: 37,
+            boldtext: "Бонуси при вступі",
+            text:"в мережу + ліди"
+        },
+        {
+            nameIcon: "icon-checkList",
+            width: 46,
+            height: 37,
+            boldtext: "Відсутність обовʼязкових планiв",
+            text:"продажів"
+        },
+        {
+            nameIcon: "icon-book",
+            width: 46,
+            height: 37,
+            boldtext: "Один договір для",
+            text: "бронювання всіх ТО"
+        },
+        {
+            nameIcon: "icon-desktop",
+            width: 46,
+            height: 37,
+            boldtext: "Безкоштовна ",
+            text: "CRM та пошук"
+        },
+        {
+            nameIcon: "icon-doodleMen",
+            width: 46,
+            height: 37,
+            boldtext: "Працюйте під брендом ТАТ,",
+            text: "або збережіть власний бренд"
+        },
+        {
+            nameIcon: "icon-pass",
+            width: 46,
+            height: 37,
+            boldtext: "Індивідуальні доступи ",
+            text: "до кабінетів ТО",
+        },
+        {
+            nameIcon: "icon-giveCoins",
+            width: 46,
+            height: 37,
+            boldtext: "Підвищена ",
+            text: "комісія",
+        },
+
+
+    ]
+
+  section.about
+    .container
+        h2.title Чому ТАТ?
+        ul.about-list
+          each item in aboutList
+            li.about-item
+                +icon(item.nameIcon,item.width, item.height)
+                p.about-item-boldtext=item.boldtext
+                p.about-item-text=item.text
+

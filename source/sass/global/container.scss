@@ -1,0 +1,8 @@
+.container {
+  width: 100%;
+  justify-content: center;
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 0 calc(16px + (180 - 16) * ((100vw - 375px) / (1512 - 320)));
+
+}

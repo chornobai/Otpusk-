@@ -1,0 +1,51 @@
+// @font-face {
+//   font-style: normal;
+//   font-weight: 400;
+//   font-family: "Rouble";
+
+//   font-display: swap;
+//   src:
+//     url("../fonts/rouble.woff2") format("woff2");
+// }
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "ProximaNova-Semibold";
+
+  font-display: swap;
+  src:
+  url("../../fonts/ProximaNova-Semibold.woff2") format("woff2"),
+  url("../../fonts/ProximaNova-Semibold.woff") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "ProximaNova-Bold";
+
+  font-display: swap;
+  src:
+          url("../../fonts/ProximaNova-Bold.woff2") format("woff2"),
+          url("../../fonts/ProximaNova-Bold.woff") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "ProximaNova-Medium";
+
+  font-display: swap;
+  src:
+          url("../../fonts/Mulish-Medium.woff2") format("woff2"),
+          url("../../fonts/Mulish-Medium.woff") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "ProximaNova-Regular";
+
+  font-display: swap;
+  src:
+          url("../../fonts/ProximaNova-Regular.woff2") format("woff2"),
+          url("../../fonts/ProximaNova-Regular.woff") format("woff2");
+}

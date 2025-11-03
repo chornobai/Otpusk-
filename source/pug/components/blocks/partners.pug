@@ -1,0 +1,41 @@
+mixin partners()
+    -
+        const partnersLogo = [
+            { path:"content/logo-partners",name: "logo-tui", format:"avif",width: 109, height:48, href:"#",operator:"Туи оператор" },
+            { path:"content/logo-partners",name: "logo-rainbow", format:"avif",width: 132, height:30, href:"#",operator:"Радуга оператор" },
+            { path:"content/logo-partners",name: "logo-itaka", format:"avif",width: 144, height:30, href:"#",operator:"Итака оператор" },
+            { path:"content/logo-partners",name: "logo-toco", format:"avif",width: 148, height:86, href:"#",operator:"Токо оператор" },
+            { path:"content/logo-partners",name: "logo-exim", format:"avif",width: 148, height:86, href:"#",operator:"Эксим оператор" },
+            { path:"content/logo-partners",name: "logo-der", format:"avif",width: 148, height:86, href:"#",operator:"Дер оператор" },
+            { path:"content/logo-partners",name: "logo-orex", format:"avif",width: 148, height:86, href:"#",operator:"Орекс оператор" },
+        ]
+        const partnersCountry = [
+            {country:"Великобританія", width:20, height:15, flag:"icon-british"},
+            {country:"Німеччина", width:20, height:15, flag:"icon-germany"},
+            {country:"Бельгія", width:20, height:15, flag:"icon-belgium"},
+            {country:"Польша", width:20, height:15, flag:"icon-poland"},
+            {country:"Чехія", width:20, height:15, flag:"icon-czech"},
+            {country:"Словаччина", width:20, height:15, flag:"icon-slovakia"},
+            {country:"Молдова", width:20, height:15, flag:"icon-moldova"},
+            {country:"Австрія", width:20, height:15, flag:"icon-austria"},
+            {country:"Угорщина", width:20, height:15, flag:"icon-hungary"},
+            {country:"Румунія", width:20, height:15, flag:"icon-romania"},
+            {country:"Болгарія", width:20, height:15, flag:"icon-bulgaria"},
+            {country:"та інші країни", width:20, height:15, flag:"icon-country-other"},
+        ]
+
+    section.partners
+        .container
+            h2.title TAT – офіційний представник багатьох закордонних операторів
+            .partners-wrapper
+                ul.partners-logo-list
+                    each item in partnersLogo
+                        li.partners-item
+                            a(href=item.href, aria-label=item.operator).partner-logo-link
+                                +img(item.path,item.name, item.format,item.width, item.height, item.operator)
+
+                ul.partners-country-list
+                    each country in partnersCountry
+                        li.partners-country-item
+                            +icon(country.flag, country.width, country.height)
+                            span= country.country

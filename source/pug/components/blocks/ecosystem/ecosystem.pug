@@ -1,0 +1,74 @@
+mixin ecosystem()
+    -
+        const dataEcosystem = [
+            {
+                title:"Турсканер",
+                description:"Швидка і зручна система пошуку та бронювання турів, готелів та квитків.\n" +
+                        "Більше 70 туроператорів та 50 міст вильоту в одній системі.",
+                effortsList:[
+                    {text:"Динамічний графік цін по датах"},
+                    {text:"Порівняння цін всіх туроператорів для легкого вибору кращої пропозиції"},
+                    {text:"Повний опис, фото та характеристики готелів, рейтинги та реальні відгуки туристів"},
+                    {text:"Зручний пошук турів за країною, містом вильоту, рейтингом готелю та іншими параметрами"}
+                ],
+                pictureData:{
+                    path:"content/ecosystem",
+                    image:"scanner",
+                    format:"png",
+                    width:1152,
+                    height:754,
+                    altText:"True scanner example"
+                },
+                blockClass:"trueScanner"
+            },
+            {
+                title: "ефективна CRM-система",
+                description: "Ведення усіх заявок, підписання договорів та розрахунки — в одній системі.",
+                effortsList: [
+                    {text: "Зручне управління замовленням: від першого звернення туриста до його вильоту"},
+                    {text: "Імпорт заявок з сайтів туроператорів"},
+                    {text: "Автоматизація роботи кількох офісів: менеджмент, стандарти, звіти та статистика"},
+                    {text: "Створення власних колекцій готелів за категоріямии"},
+                    {text: "Оформлення стильних та інформативних добірок для туристів"},
+                    {text: "Швидке оформлення договору з туристом та дистанційне підписання"},
+                    {text: "Завантаження замовлень з різних джерел"},
+                    {text: "Швидке оформлення договору з туристом та дистанційне підписання"},
+                    {text: "Зручна мобільна версія системи"},
+
+                ],
+                pictureData: {
+                    path: "content/ecosystem",
+                    image: "crm-system",
+                    format: "png",
+                    width: 1152,
+                    height: 754,
+                    altText: "CRM-system picture"
+                },
+                blockClass: "crm-system"
+            },
+            {
+                title: "Біржа лідів",
+                description: "Власна біржа заявок для турагентів – реальні клієнти з TAT.UA, ТурПравда та таргетованої реклами",
+                pictureData: {
+                    path: "content/ecosystem",
+                    image: "crm-system",
+                    format: "png",
+                    width: 1152,
+                    height: 754,
+                    altText: "Lids base picture"
+                },
+                blockClass: "lids"
+            }
+        ]
+
+    section.ecosystem
+        .container
+            h2.title Отримайте можливості екосистеми ТАТ
+            each item in dataEcosystem
+                +ecosystem-block(
+                    item.title,
+                    item.description,
+                    item.effortsList,
+                    item.pictureData,
+                    item.blockClass
+                )

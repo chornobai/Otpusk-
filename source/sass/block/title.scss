@@ -1,0 +1,39 @@
+.title {
+  font-family: $ff-bold;
+  font-weight: 700;
+  font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1512 - 320)));
+  line-height: 100%;
+  letter-spacing: 0.3px;
+
+
+  &--main {
+    font-size: calc(34px + (42 - 34) * ((100vw - 375px) / (1512 - 320)));
+
+    line-height: 52px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+  }
+
+  &--connection {
+    font-size: calc(28px + (42 - 28) * ((100vw - 375px) / (1512 - 320)));
+
+    line-height: 52px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &--middle {
+    font-family: $ff-bold;
+    font-weight: 700;
+
+    margin: 0;
+
+
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+  }
+}

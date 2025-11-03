@@ -1,0 +1,31 @@
+mixin header(headerMods, currentUrl)
+  -
+    const languages = [
+      { text: "UA", value: "ua", isActive: true },
+      { text: "EN", value: "en", isActive: false }
+    ];
+
+  header.header(class=headerMods)
+    .container
+      .header-column-left
+        nav.header-nav
+          a(href="#", aria-label="Лого Отпуск")
+            span.header-logo
+              +icon("icon-logo", 88, 48)
+              span Франшиза
+
+          .header-wrapper-select
+            +custom-select({
+              error: "Потрібно вибрати мову",
+
+              optionsList: [
+                { text: "UA", value: "id-1", isActive: true },
+                { text: "EN", value: "id-2" },
+              ]
+            })(data-select, data-validate-type="select", data-name="some-name").header-custom-select
+
+        h1.title.title--main Франшиза туристичної агенції ТАТ
+      .header-column-right
+        +btn({text: "Зв'язатися", href: "tel:+380123456789"}).btn--outline
+        +btn({text: "Реєстрація", href: "#", target: "_blank", isExternal: true}).btn_main
+

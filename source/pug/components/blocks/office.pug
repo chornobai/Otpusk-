@@ -1,0 +1,76 @@
+mixin office()
+    -
+        const dataOffice = [
+            {
+                path: "content/office",
+                image: "office-1",
+                format: "png",
+                width: 497,
+                height: 469,
+                altText: "office picture"
+            },
+            {
+                path: "content/office",
+                image: "office-2",
+                format: "png",
+                width: 497,
+                height: 469,
+                altText: "office picture"
+            },
+         {
+                path: "content/office",
+                image: "office-3",
+                format: "png",
+                width: 432,
+                height: 469,
+                altText: "office picture"
+            },
+            {
+                path: "content/office",
+                image: "office-4",
+                format: "png",
+                width: 439,
+                height: 492,
+                altText: "office picture"
+            },
+            {
+                path: "content/office",
+                image: "office-5",
+                format: "png",
+                width: 521,
+                height: 492,
+                altText: "office picture"
+            },
+            {
+                path: "content/office",
+                image: "office-6",
+                format: "png",
+                width: 467,
+                height: 231,
+                altText: "office picture"
+            },
+            {
+                path: "content/office",
+                image: "office-7",
+                format: "png",
+                width: 467,
+                height: 231,
+                altText: "office picture"
+            }
+
+        ];
+    section.office
+        .container
+            h2.title Оформіть офіс у впізнаваний стиль агенцій ТАТ
+            ul.office-content
+                each item in dataOffice
+                    li.office-content-item
+                        +picture(
+                            item.path,
+                            item.image,
+                            item.format,
+                            item.width,
+                            item.height,
+                            item.altText
+                        )
+

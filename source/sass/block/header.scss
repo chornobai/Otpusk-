@@ -1,0 +1,81 @@
+.header {
+  padding: 28px 0;
+  background: $color-yellow;
+
+  .container {
+    display: flex;
+    gap: 2%;
+    @include vp-1279 {
+      flex-direction: column;
+    }
+  }
+
+
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  font-family: "ProximaNova-Regular";
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $-color-dark;
+  margin-right: 8px;
+
+  span {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: -20%;
+      height: 50px;
+      width: 2px;
+      background-color: $color-default-white;
+    }
+  }
+
+}
+
+.header-nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header-custom-select {
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: none;
+
+  button {
+    border: none;
+  }
+}
+
+.header-column-left {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.header-column-right {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  gap: 24px;
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+

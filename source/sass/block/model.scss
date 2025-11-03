@@ -1,0 +1,58 @@
+.model {
+  padding: 90px 0 90px;
+  background: url("../../img/bg/model-bg.png") center no-repeat;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    .model-notes {
+      align-self: flex-end;
+    }
+
+    .model-action {
+      padding: 20px 50px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      background: rgba($-color-dark, 0.2);
+    }
+  }
+
+  .model-wrapper {
+    display: grid;
+    grid-template-columns: max(184px) 1fr;
+
+  }
+
+  .model-cards-wrapper {
+
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-column-gap: 16px;
+  }
+
+  .model-sidebar-list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    padding: 260px 0 0 0;
+    list-style: none;
+    font-size: 17px;
+    width: 100%;
+
+    .model-sidebar-item {
+
+      width: 100%;
+      border-bottom: 1px solid $color-gray;
+    }
+
+  }
+}

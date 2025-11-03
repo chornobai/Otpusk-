@@ -1,0 +1,19 @@
+mixin finance()
+  -
+    const financeList = [
+        { value: "100 - 200",currency:"тис грн", text: "початкова інвестиція" },
+        { value: "4 - 6",currency:"місяці", text: "вихід на окупність" },
+        { value: "1 - 2", currency:"роки", text: "повернення інвестицій" }
+    ]
+
+  section.finance
+    .container
+
+        h2.title Фінансові показники
+        ul.finance-list
+          each item in financeList
+              li.finance-item
+                  .finance-top
+                      span.finance-value=item.value
+                      span.finance-currency=item.currency
+                  span.finance-text= item.text
