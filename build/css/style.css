@@ -1936,6 +1936,7 @@ button,
       align-self: flex-end;
 }
 .model .container .model-action {
+  width: 100%;
   padding: 20px 50px;
   border-radius: 24px;
   display: -webkit-box;
@@ -2148,7 +2149,7 @@ button,
   height: 144px;
 }
 .card .card-study {
-  height: 199px;
+  min-height: 199px;
   padding-bottom: 10px;
 }
 .card li.card-ad {
@@ -2267,6 +2268,7 @@ button,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 .contacts-list .item-social {
   display: -webkit-box;
